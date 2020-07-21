@@ -6,11 +6,38 @@
              mc:Ignorable="d"
              x:Class="CP2.MainPage">
 
-    <StackLayout>
+    <StackLayout Orientation="Vertical">
+        
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+
+        <Label Text="Complete los Datos" FontSize="Large"/>
+        <Label Text="" FontSize="Medium"/>
+        
+        <Label Text="Ingrese Monto del Prestamo" FontSize="Large"/>
+        <Entry x:Name="txtMONTO"/>
+
+        <Label Text="Ingrese Tiempo" FontSize="Large"/>
+        <Picker Title="Seleccione una opción"
+        TitleColor="Blue"
+        x:Name="pkTIEMPO">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1 Mes</x:String>
+                    <x:String>2 Meses</x:String>
+                    <x:String>3 Meses</x:String>
+                    <x:String>4 Meses</x:String>
+                    <x:String>5 Meses</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Ingrese Tasa" FontSize="Large"/>
+        <Entry x:Name="txtTASA"/>
+
+        <Button Text="Calcular"  x:Name="btnCalcular" Clicked="btnCalcular_Clicked" FontSize="Large"/>
+
+        <Label Text="By: Tito Daniel Matos Perozo" FontSize="Medium"/>
+
     </StackLayout>
 
 </ContentPage>
